@@ -1,0 +1,8 @@
+<li class="header">Main Menu</li>
+<li <?php if(isset($m_customers_management)) { ?>class = "active" <?php } ?>><a href='<?php echo site_url('examples/customers_management')?>'><i class="fa fa-circle-o"></i> <span>Customers</span></a></li>
+<li <?php if(isset($m_orders_management)) { ?>class = "active" <?php } ?>><a href='<?php echo site_url('examples/orders_management')?>'><i class="fa fa-circle-o"></i> <span>Orders</a></span></li>
+<li <?php if(isset($m_products_management)) { ?>class = "active" <?php } ?>><a href='<?php echo site_url('examples/products_management')?>'><i class="fa fa-circle-o"></i> <span>Products</a></span></li>
+<li <?php if(isset($m_offices_management)) { ?>class = "active" <?php } ?>><a href='<?php echo site_url('examples/offices_management')?>'><i class="fa fa-circle-o"></i> <span>Offices</a></span></li>
+<li <?php if(isset($m_employees_management)) { ?>class = "active" <?php } ?>><a href='<?php echo site_url('examples/employees_management')?>'><i class="fa fa-circle-o"></i> <span>Employees</a></span></li>
+<li <?php if(isset($m_film_management)) { ?>class = "active" <?php } ?>><a href='<?php echo site_url('examples/film_management')?>'><i class="fa fa-circle-o"></i> <span>Films</a></span></li>
+<li <?php if(isset($m_multigrids)) { ?>class = "active" <?php } ?>><a href='<?php echo site_url('examples/multigrids')?>'><i class="fa fa-circle-o"></i> <span>Multigrid [BETA]</a></span></li>
