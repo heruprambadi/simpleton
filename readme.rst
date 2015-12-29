@@ -1,6 +1,6 @@
 Apa itu Simpleton ?
 ================
-Simpleton adalah Codeigniter skeleton (kerangka codeigniter) yang akan membantu anda untuk mempersiapkan kerangka kerja yang anda perlukan untuk project baru anda. Ini karena Simpleton sudah dilengkapi dengan GroceryCRUD dan Ion Auth. 2 library ini bagi saya sangat dibutuhkan dalam membangun suatu aplikasi. Simpleton juga telah dilengkapi dengan template AdminLTE, salah satu template populer yang sering dibicarakan di group-group pemroigraman :D
+Simpleton adalah Codeigniter skeleton (kerangka codeigniter) yang akan membantu anda untuk mempersiapkan kerangka kerja yang anda perlukan untuk project baru anda. Ini karena Simpleton sudah dilengkapi dengan GroceryCRUD dan Ion Auth. 2 library ini bagi saya sangat dibutuhkan dalam membangun suatu aplikasi. Simpleton juga telah dilengkapi dengan template AdminLTE, salah satu template populer yang sering dibicarakan di group-group pemrograman :D
 
 Untuk siapa Simpleton ditujukan ?
 ===================
