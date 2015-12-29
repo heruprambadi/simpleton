@@ -5,12 +5,14 @@ Simpleton adalah Codeigniter skeleton (kerangka codeigniter) yang akan membantu 
 Untuk siapa Simpleton ditujukan ?
 ===================
 Simpleton ditujukan untuk kamu yang familiar dengan :
+
 * Codeigniter
 * Admin LTE
 * Ion Auth
 * GroceryCrud
 
 Ingredients :
+
 * Codeigniter 3.0.3
 * Admin LTE 2.3.0
 * Ion Auth 2
@@ -24,7 +26,8 @@ Release Information
 
 Screenshoot
 ===================
-https://drive.google.com/file/d/0B2Mw3Hu5znRDaktFdENXamdlZDA/preview
-https://drive.google.com/file/d/0B2Mw3Hu5znRDS3NyMjUydkpTLXM/preview
-https://drive.google.com/file/d/0B2Mw3Hu5znRDZm5JTmxTRW9JQUE/preview
-https://drive.google.com/file/d/0B2Mw3Hu5znRDQmo0M2VxNTI0S3M/preview
+
+*https://drive.google.com/file/d/0B2Mw3Hu5znRDaktFdENXamdlZDA/preview
+*https://drive.google.com/file/d/0B2Mw3Hu5znRDS3NyMjUydkpTLXM/preview
+*https://drive.google.com/file/d/0B2Mw3Hu5znRDZm5JTmxTRW9JQUE/preview
+*https://drive.google.com/file/d/0B2Mw3Hu5znRDQmo0M2VxNTI0S3M/preview
