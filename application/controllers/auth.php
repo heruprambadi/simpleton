@@ -683,7 +683,13 @@ class Auth extends CI_Controller {
 			'type' => 'password'
 		);
 
-		$this->_render_page('auth/edit_user', $this->data);
+		 ////////Config Halaman////////
+		$data['judul_besar'] = 'Edit User';
+		$data['judul_kecil'] = 'List';
+		$data['m_auth_index'] = TRUE;
+		$data['output'] = $this->data;
+		$data['view_file'] = 'auth/edit_user';
+		$this->load->view('auth/main', $data, FALSE);
 	}
 
 	// create a new group
@@ -729,7 +735,13 @@ class Auth extends CI_Controller {
 				'value' => $this->form_validation->set_value('description'),
 			);
 
-			$this->_render_page('auth/create_group', $this->data);
+			////////Config Halaman////////
+			$data['judul_besar'] = 'Edit Group';
+			$data['judul_kecil'] = 'List';
+			$data['m_auth_index'] = TRUE;
+			$data['output'] = $this->data;
+			$data['view_file'] = 'auth/create_group';
+			$this->load->view('auth/main', $data, FALSE);
 		}
 	}
 
@@ -794,7 +806,13 @@ class Auth extends CI_Controller {
 			'value' => $this->form_validation->set_value('group_description', $group->description),
 		);
 
-		$this->_render_page('auth/edit_group', $this->data);
+		 ////////Config Halaman////////
+		$data['judul_besar'] = 'Edit Group';
+		$data['judul_kecil'] = 'List';
+		$data['m_auth_index'] = TRUE;
+		$data['output'] = $this->data;
+		$data['view_file'] = 'auth/edit_group';
+		$this->load->view('auth/main', $data, FALSE);
 	}
 
 

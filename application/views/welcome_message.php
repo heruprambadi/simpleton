@@ -279,7 +279,11 @@
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <?php if (!$this->ion_auth->logged_in()){ ?>
+                      <a href="<?= site_url('auth/login') ?>" class="btn btn-default btn-flat">Sign In</a>
+                    <?php } elseif($this->ion_auth->logged_in()) { ?>
+                      <a href="<?= site_url('auth/logout') ?>" class="btn btn-default btn-flat">Sign out</a>
+                    <?php } ?>
                     </div>
                   </li>
                 </ul>
@@ -319,7 +323,9 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <?php $this->load->view('main_menu', '', FALSE); ?>
+            <?php if($this->ion_auth->logged_in()) { ?>
             <?php $this->load->view('admin_menu', '', FALSE); ?>
+            <?php } ?>
           </ul>
         </section>
         <!-- /.sidebar -->

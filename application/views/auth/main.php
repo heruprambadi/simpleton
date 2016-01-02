@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="<?= base_url('assets/adminlte/dist/css/skins/_all-skins.min.css') ?>">
     <!-- iCheck -->
     <link rel="stylesheet" href="<?= base_url('assets/adminlte/plugins/iCheck/flat/blue.css') ?>">
+
+    <!-- iCheck -->
+    <link rel="stylesheet" href="<?= base_url('assets/adminlte/plugins/iCheck/square/blue.css') ?>">
     <!-- Morris chart -->
     <link rel="stylesheet" href="<?= base_url('assets/adminlte/plugins/morris/morris.css') ?>">
     <!-- jvectormap -->
@@ -274,7 +277,11 @@
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <?php if (!$this->ion_auth->logged_in()){ ?>
+                      <a href="<?= site_url('auth/login') ?>" class="btn btn-default btn-flat">Sign In</a>
+                    <?php } elseif($this->ion_auth->logged_in()) { ?>
+                      <a href="<?= site_url('auth/logout') ?>" class="btn btn-default btn-flat">Sign out</a>
+                    <?php } ?>
                     </div>
                   </li>
                 </ul>
@@ -314,7 +321,9 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <?php $this->load->view('main_menu', '', FALSE); ?>
+            <?php if($this->ion_auth->logged_in()) { ?>
             <?php $this->load->view('admin_menu', '', FALSE); ?>
+            <?php } ?>
           </ul>
         </section>
         <!-- /.sidebar -->
@@ -524,6 +533,7 @@
     <script src="<?= base_url('assets/adminlte/plugins/jQuery/jQuery-2.1.4.min.js') ?>"></script>
     <!-- Bootstrap 3.3.5 -->
     <script src="<?= base_url('assets/adminlte/bootstrap/js/bootstrap.min.js') ?>"></script>
+    <script src="<?= base_url('assets/adminlte/plugins/iCheck/icheck.min.js') ?>"></script>
     <!-- Morris.js charts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="<?= base_url('assets/adminlte/plugins/morris/morris.min.js') ?>"></script>
