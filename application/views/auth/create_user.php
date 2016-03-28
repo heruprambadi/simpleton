@@ -25,7 +25,7 @@
   </div>
   <div class="form-group">
     <?php if($identity_column!=='email') { ?>
-    <label for="exampleInputPassword1"><?php echo lang('create_user_identity_label', 'identity');;?></label>
+    <label for="exampleInputPassword1"><?php echo lang('create_user_identity_label', 'identity');?></label>
     <?php echo form_error('identity'); echo form_input($identity);?>
     <?php } ?>
   </div>

@@ -30,10 +30,10 @@
   <div id="infoMessage"><?php echo $message;?></div>
     <div class="login-box">
       <div class="login-logo">
-        <a href="http://heruprambadi.com" target="_blank"><b>Simpleton</b><br><h6>By : Heru Prambadi</h6></a>
+        <a href="http://heruprambadi.com" target="_blank"><b>Monev App</b><br><h6>By : TIPD UMRI</h6></a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
-        <p class="login-box-msg">Sign in untuk memulai</p>
+        <p class="login-box-msg">Login untuk memulai</p>
         <?php echo form_open("auth/login");?>
           <div class="form-group has-feedback">
             <?php echo form_input($identity, '', 'type="email" class="form-control" placeholder="Email"');?>
@@ -58,15 +58,6 @@
             </div><!-- /.col -->
           </div>
         <?php echo form_close();?>
-
-        <div class="social-auth-links text-center">
-          <p>- OR -</p>
-          <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
-          <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
-        </div><!-- /.social-auth-links -->
-
-        <a href="forgot_password"><?php echo lang('login_forgot_password');?></a><br>
-        <a href="#" class="text-center">Mendaftar</a>
 
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->

@@ -25,10 +25,10 @@
 			                <?php endforeach?>
 						</td>
 						<td><?php echo ($user->active) ?
-                '<a href="#myModal" class="trash" data-id="'.$user->id.'" role="button" data-toggle="modal">'.lang('index_active_link').'</a>'
+                anchor("auth/deactivate/". $user->id, lang('index_active_link'))
                 :
-                anchor("auth/activate/". $user->id, lang('index_inactive_link'), 'data-toggle="modal" data-target="#myModal"');?></td>
-						<td><?php echo anchor("auth/edit_user/".$user->id, 'Edit') ;?></td>
+                anchor("auth/activate/". $user->id, lang('index_inactive_link'));?></td>
+            <td><?php echo anchor("auth/edit_user/".$user->id, 'Edit') ;?></td>
 					</tr>
 				<?php endforeach;?>
                   </tbody></table>
@@ -57,12 +57,25 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                 <h3 id="myModalLabel">Delete Confirmation</h3>
+                 <h3 id="myModalLabel">Konfirmasi</h3>
 
             </div>
             <div class="modal-body">
-                <p class="error-text"><i class="fa fa-warning modal-icon"></i>Are you sure you want to delete the cover?
-                    <br>This cannot be undone.</p>
+                <?php echo form_open("auth/deactivate/".$user->id);?>
+  <div class="form-group">
+
+    <?php echo lang('deactivate_confirm_y_label', 'confirm');?>
+    <input type="radio" name="confirm" value="yes" checked="checked" />
+    
+    <?php echo lang('deactivate_confirm_n_label', 'confirm');?>
+    <input type="radio" name="confirm" value="no" />
+  </div>
+  <div class="box-footer">
+  <?php echo form_hidden($csrf); ?>
+  <?php echo form_hidden(array('id'=>$user->id)); ?>
+    <?php echo form_submit('submit', lang('deactivate_submit_btn'));?>
+  </div>
+  <?php echo form_close(); ?><!-- /.box -->
             </div>
             <div class="modal-footer">
                <button class="btn btn-default"data-dismiss="modal" aria-hidden="true">Cancel</button> <a href="#" class="btn btn-danger"  id="modalDelete" >Delete</a>
